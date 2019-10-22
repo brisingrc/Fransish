@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController">
+            <connections>
+                <outlet property="collectionView" destination="kfY-Sz-iMo" id="rnx-dT-054"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kfY-Sz-iMo">
+                    <rect key="frame" x="8" y="56" width="359" height="611"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="FtA-xl-GKW">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CJM-PT-7OV"/>
+                        <outlet property="delegate" destination="-1" id="0ll-Jr-xaI"/>
+                    </connections>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="sYo-51-rMO">
+                    <rect key="frame" x="131.5" y="8" width="112" height="40"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1s-3j-BlT">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" red="0.95686274509803915" green="0.66274509803921566" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                            <state key="normal" image="SearchIcon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clickSearch" destination="-1" eventType="touchUpInside" id="no4-gr-2ZZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzf-yb-IRs">
+                            <rect key="frame" x="72" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" red="0.95686274509803915" green="0.66274509803921566" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="sqj-lt-wL8"/>
+                                <constraint firstAttribute="height" constant="40" id="uHp-vV-Xgw"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                            <state key="normal" image="StarIcon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="favotire" destination="-1" eventType="touchUpInside" id="DQr-Gm-nqZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kfY-Sz-iMo" firstAttribute="top" secondItem="sYo-51-rMO" secondAttribute="bottom" constant="8" id="CGi-1X-WTw"/>
+                <constraint firstItem="kfY-Sz-iMo" firstAttribute="leading" secondItem="Pch-Xr-COZ" secondAttribute="leading" constant="8" id="ER1-x6-iJO"/>
+                <constraint firstItem="sYo-51-rMO" firstAttribute="top" secondItem="Pch-Xr-COZ" secondAttribute="top" constant="8" id="FnX-en-WrS"/>
+                <constraint firstItem="Pch-Xr-COZ" firstAttribute="bottom" secondItem="kfY-Sz-iMo" secondAttribute="bottom" id="Qan-8v-ehJ"/>
+                <constraint firstItem="sYo-51-rMO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dzO-HT-GcP"/>
+                <constraint firstItem="Pch-Xr-COZ" firstAttribute="trailing" secondItem="kfY-Sz-iMo" secondAttribute="trailing" constant="8" id="oWq-xe-vhD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Pch-Xr-COZ"/>
+            <point key="canvasLocation" x="-127.2" y="18.440779610194905"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SearchIcon" width="64" height="64"/>
+        <image name="StarIcon" width="64" height="64"/>
+    </resources>
+</document>

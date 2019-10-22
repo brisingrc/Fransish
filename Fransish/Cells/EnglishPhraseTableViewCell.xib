@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="132" id="KGk-i7-Jjw" customClass="EnglishPhraseTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="131.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiT-Kh-dcX">
+                        <rect key="frame" x="0.0" y="4" width="343" height="123.5"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rXJ-aL-MNf">
+                                <rect key="frame" x="16" y="8" width="311" height="107.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.66274509800000003" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rXJ-aL-MNf" firstAttribute="top" secondItem="SiT-Kh-dcX" secondAttribute="top" constant="8" id="3Nc-my-87Y"/>
+                            <constraint firstItem="rXJ-aL-MNf" firstAttribute="centerY" secondItem="SiT-Kh-dcX" secondAttribute="centerY" id="P8w-se-zGd"/>
+                            <constraint firstAttribute="trailing" secondItem="rXJ-aL-MNf" secondAttribute="trailing" constant="16" id="X7Y-KT-zNW"/>
+                            <constraint firstItem="rXJ-aL-MNf" firstAttribute="leading" secondItem="SiT-Kh-dcX" secondAttribute="leading" constant="16" id="fV5-cz-Sa8"/>
+                            <constraint firstAttribute="bottom" secondItem="rXJ-aL-MNf" secondAttribute="bottom" constant="8" id="hzV-Gb-Qif"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" clipsSubviews="YES" tag="1000000" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5h-8k-SpZ">
+                        <rect key="frame" x="359" y="46" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.33333333333333331" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="jze-Q9-Fgq"/>
+                            <constraint firstAttribute="width" constant="40" id="rK5-C9-eue"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                        <state key="normal" image="StarIcon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="Clicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LqU-Lz-skJ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="H5h-8k-SpZ" firstAttribute="leading" secondItem="SiT-Kh-dcX" secondAttribute="trailing" constant="16" id="JX8-WW-1Ba"/>
+                    <constraint firstAttribute="bottom" secondItem="SiT-Kh-dcX" secondAttribute="bottom" constant="4" id="RKH-66-ghR"/>
+                    <constraint firstItem="SiT-Kh-dcX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SHf-YQ-6wG"/>
+                    <constraint firstItem="SiT-Kh-dcX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="UtT-R7-1iz"/>
+                    <constraint firstAttribute="trailing" secondItem="H5h-8k-SpZ" secondAttribute="trailing" id="m6r-U4-Z5O"/>
+                    <constraint firstItem="H5h-8k-SpZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vee-hb-eaA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="70.28985507246378" y="164.0625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="StarIcon" width="64" height="64"/>
+    </resources>
+</document>
